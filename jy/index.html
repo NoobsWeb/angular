@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>均瑶人才发展平台</title>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/css/main.css">
+ 	<script type="text/javascript" src='static/js/jquery.js'></script>
+    <script type="text/javascript" src='static/js/angular.min.js'></script>
+    <script type="text/javascript" src='static/js/angular-route.min.js'></script>   
+    <script type="text/javascript" src='static/js/ng-pagination.min.js'></script> 
+    <script type="text/javascript" src='static/js/app.js'></script>
+    <script type="text/javascript" src='static/js/controller.js'></script>
+    
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row" id="head">
+            <h1 class="pull-left">
+            	<a href="#overview">
+            		<img alt="" src="static/images/logo.png">
+            		<span>钧瑶关键人才职业发展平台</span>
+            	</a>
+            </h1>
+            <ul class="pull-right">
+                <li><i class="icon-user"></i>欢迎您，<span>admin</span></li>
+                <li>|</li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+
+        <div class="row mainArea">
+			<div id="sidebar" class="page-sidebar" sidebar>
+                <ul class="nav sidebar-menu sidebar-menu-shadow">            
+                    <li class="active">
+                        <a href="javascript:;">
+                            <i class="icon-th-large"></i>
+                            <span class="menu-text"> 岗位管理 </span>
+                        </a>
+                    </li> 
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="icon-group"></i>
+                            <span class="menu-text"> 人才库 </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#404">
+                            <i class="icon-globe"></i>
+                            <span class="menu-text">人才地图</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#404">
+                            <i class="icon-list-alt"></i>
+                            <span class="menu-text">公司分析</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content" ng-view></div>
+        </div>
+	</div>
+</body>
+</html>

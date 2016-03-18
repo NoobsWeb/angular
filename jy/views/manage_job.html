@@ -1,0 +1,101 @@
+<div class="page-content clearfix">
+    <div class="pare-head clearfix">
+        <dl class="pull-left">
+            <dt>岗位管理</dt>
+            <dd>
+                <ol class="crumbs clearfix">
+                    <li>岗位管理</li>                
+                </ol>
+            </dd>
+        </dl>
+    </div>
+    <div class="con-wrap" ng-controller="manage-table">
+    	<div class="row">
+    		<div class="col-lg-4 col-md-12">
+				<p class="pull-left bg-date">来源公司：</p>
+                <div class="select pull-left">
+                    <cite>全部来源公司</cite>
+                     <ol>
+                        <li ng-repeat="names in companys"><a href="javascript:;">{{names.name}}</a></li>
+                    </ol>
+                </div>
+    		</div>
+    		<div class="col-lg-4 col-md-12">
+				<p class="pull-left bg-date">来源部门：</p>
+                <div class="select pull-left">
+                    <cite>全部来源部门</cite>
+                     <ol>
+                        <li ng-repeat="names in part"><a href="javascript:;">{{names.name}}</a></li>
+                    </ol>
+                </div>
+    		</div>
+    		<div class="col-lg-4 col-md-12">
+				<p class="pull-left bg-date">推荐状态：</p>
+                <div class="select pull-left">
+                    <cite>全部招聘状态：</cite>
+                     <ol>
+                        <li><a href="javascript:;">选择时间范围</a></li>
+                        <li><a href="javascript:;">最近一年</a></li>
+                        <li><a href="javascript:;">2015年度</a></li>
+                    </ol>
+                </div>
+    		</div>
+    	</div>
+    	<div class="row row-top-10">
+    		<div class="col-lg-4 col-md-12">
+				<p class="pull-left bg-date">岗位编号：</p>
+               	<input type="text" class="pull-left search-input" placeholder="请输入搜索关键词"/>
+    		</div>
+    		<div class="col-lg-4 col-md-12">
+				<p class="pull-left bg-date">岗位名称：</p>
+               	<input type="text" class="pull-left search-input" placeholder="请输入搜索关键词"/>
+    		</div>
+    		<div class="col-lg-4 col-md-12 col-special">
+				<p class="pull-left bg-date">岗位关键词：</p>
+               	<input type="text" class="pull-left search-input" placeholder="请输入搜索关键词"/>
+    		</div>
+    	</div>
+		<div class="row row-top-20">
+			<button class="btn btn-enter pull-left">岗位录入</button>
+			<button class="btn btn-search pull-right"><i class="icon-search"></i>岗位搜索</button>
+		</div>
+		<div class="row row-top-10" >
+            <div class="col-lg-12">
+                <table class="table-jy">
+                    <tr>
+                        <th width="10%">编号</th>
+                        <th width="10%">岗位</th>
+                        <th width="10%">来源公司</th>
+                        <th width="10%">所属部门</th>
+                        <th width="10%">录入时间</th>
+                        <th width="10%">更新时间</th>
+                        <th width="10%">招聘人数</th>
+                        <th width="10%">招聘状态</th>
+                        <th width="20%">操作</th>
+                    </tr>
+                    <tr ng-repeat="item in items">
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.work }}</td>
+                        <td>{{ item.company }}</td>
+                        <td>{{ item.part }}</td>
+                        <td>{{ item.enterTime }}</td>
+                        <td>{{ item.updateTime }}</td>
+                        <td>{{ item.count }}</td>
+                        <td>{{ item.status }}</td>
+                        <td>
+                            <a href="javascript:" >岗位画像</a>
+                            <a href="javascript:" >人才匹配</a>
+                            <a href="javascript:" >编辑</a>
+                            <a href="javascript:" >删除</a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="pager" class="float:right">
+                    <p class="pager_total" style="float:left;margin-top:10px">共有<span>{{ pageCount }}</span>页，<span>1500</span>条记录</p>
+                    <pager page-count="pageCount" current-page="currentPage" on-page-change="onPageChange()" first-text="首页" next-text="下一页" prev-text="上一页" last-text="尾页" show-goto="true" goto-text="跳转到"></pager>
+                </div>
+            </div>
+			
+		</div>
+    </div>
+</div>
