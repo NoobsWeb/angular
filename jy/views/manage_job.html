@@ -9,7 +9,7 @@
             </dd>
         </dl>
     </div>
-    <div class="con-wrap" ng-controller="manage-table">
+    <div class="con-wrap con-wrap-border">
     	<div class="row">
     		<div class="col-lg-4 col-md-12">
 				<p class="pull-left bg-date">来源公司：</p>
@@ -83,7 +83,7 @@
                         <td>{{ item.count }}</td>
                         <td>{{ item.status }}</td>
                         <td>
-                            <a href="javascript:" >岗位画像</a>
+                            <a href="#/manage_userImg/{{ item.id }}/{{ item.work }}" >岗位画像</a>
                             <a href="javascript:" >人才匹配</a>
                             <a href="javascript:" >编辑</a>
                             <a href="javascript:" >删除</a>

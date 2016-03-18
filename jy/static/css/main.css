@@ -75,6 +75,10 @@ background: rgba(0,0,0,0.4);
 .row-top-20{
     margin-top: 20px;
 }
+.row-border-bottom{
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+}
 /*  头部样式 */
 #head {
     background: #eceff1 none repeat scroll 0 0;
@@ -169,6 +173,9 @@ background: rgba(0,0,0,0.4);
 .con-wrap {
     margin: 0 30px 20px 30px;
     padding: 10px 20px;
+    
+}
+.con-wrap-border{
     border: 1px solid #ececec;
 }
 .page-sidebar {
@@ -440,4 +447,28 @@ ul.sidebar-menu-shadowd {
 .pager_total span{
     color: #f7756c;
     padding: 0 2px;
+}
+.h1_title{
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 58px;
+}
+.h1_title span{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.btn-view{
+    width: 118px;
+    height: 40px;
+    font-size: 16px;
+    background: #fff;
+    border:1px solid #0099cc;
+    color: #3399ff;
+}
+.btn-view i {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 10px;
 }
