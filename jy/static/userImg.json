@@ -1,0 +1,51 @@
+[{
+	"title": "JD信息",
+	"class": "jd",
+	"icon": "fa-paper-plane",
+	"content": [{
+		"left": "JD来源",
+		"right": "华为"
+	}, {
+		"left": "招聘状态",
+		"right": "招聘中"
+	}, {
+		"left": "目标公司",
+		"right": "IBM"
+	}]
+},{
+	"title": "岗位信息",
+	"class": "work",
+	"icon": "fa-book",
+	"content": [{
+		"left": "名称",
+		"right": "IDC营销专家"
+	}, {
+		"left": "年薪范围",
+		"right": "100万-200万"
+	}, {
+		"left": "工作地点",
+		"right": "北京"
+	},{
+		"left": "工作地点",
+		"right": "北京"
+	}]
+},{
+	"title": "任职要求",
+	"class": "need",
+	"icon": "fa-check-circle-o",
+	"content": [{
+		"left": "性别",
+		"right": "不限"
+	}, {
+		"left": "年龄",
+		"right": "28-33岁"
+	}, {
+		"left": "工作年限",
+		"right": "5年以上"
+	}]
+},{
+	"title": "岗位职责",
+	"class": "duty",
+	"icon": "fa-paste",
+	"content": ["营销","IDC","aasd","asdq","as11","vss","nss","eew"]
+}]

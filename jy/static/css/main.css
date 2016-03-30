@@ -40,6 +40,7 @@ body {
     font-size: 12px;
     position: relative;
     overflow-x: auto;
+    min-height: 935px;
 }
 ::-webkit-scrollbar/*整体部分*/
 {
@@ -78,6 +79,9 @@ background: rgba(0,0,0,0.4);
 .row-border-bottom{
     border-bottom: 3px solid #ccc;
     padding-bottom: 10px;
+}
+.btn.focus, .btn:focus, .btn:hover{
+    color: #fff;
 }
 /*  头部样式 */
 #head {
@@ -147,12 +151,11 @@ background: rgba(0,0,0,0.4);
     width: calc(100% + 120px);
 }
 .footArea {
-    background-color: #333;
+    background-color: #eceff1;
     bottom: 0;
     height: 60px;
     margin-bottom: -50px;
     margin-left: 0;
-    position: absolute;
     width: 100%;
     z-index: 13;
 }
@@ -171,8 +174,8 @@ background: rgba(0,0,0,0.4);
     width: 80px;
 }
 .con-wrap {
-    margin: 0 30px 20px 30px;
-    padding: 10px 20px;
+    margin: 0 30px 0px 30px;
+    padding: 10px 20px 0;
     
 }
 .con-wrap-border{
@@ -240,7 +243,7 @@ ul.sidebar-menu-shadowd {
     box-shadow: -3px -3px 5px #1868b6 inset;
 }
 .pare-head{
-    padding:25px 30px;
+    padding:25px 30px 10px;
 }
 .pare-head dl {
     height: 50px;
@@ -379,7 +382,7 @@ ul.sidebar-menu-shadowd {
     width: 100%;
 }
 .table-jy tr th,.table-jy tr td{
-    padding: 5px 0;
+    padding: 10px 0;
     text-align: left;
 }
 .table-jy tr{
@@ -467,8 +470,471 @@ ul.sidebar-menu-shadowd {
     border:1px solid #0099cc;
     color: #3399ff;
 }
+.btn-manage{
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    background: #039be5;
+    color: #fff;
+}
 .btn-view i {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bolder;
     margin-right: 10px;
+}
+.col-left{
+    background:#f5f5f5;
+    padding:10px;
+    height: 100%;
+    position: absolute;
+    width: 209px;
+}
+.col-right{
+    margin-left: 210px;
+}
+.col-left p{
+    margin-top:10px;
+    text-align: center;
+}
+.col-right .tab-ul{
+    text-align: center;
+    width: 315px;
+    margin: 20px auto;
+}
+.col-right .tab-ul li{
+    float: left;
+    width: 105px;
+    height: 32px;
+    border:1px solid #0099cc;
+    line-height: 30px;
+
+}
+.col-right .tab-ul li.active{
+    background: #0099cc;
+}
+.col-right .tab-ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #3399ff;
+}
+.col-right .tab-ul li.active a{
+    color: #fff;
+}
+.col-right .tab-ul li a i{
+    margin-right: 5px;
+}
+.infoPanel{
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+}
+.infoPanel .userPic{
+    position: absolute;
+    left: 40%;
+    top:15%;
+}
+.infoPanel .line{
+    position: absolute;
+}
+.line.line1{
+    top: 10%;
+    left: 35%;
+}
+.line.line2{
+    top: 7%;
+    right: 34%;
+}
+.line.line3{
+    top: 37%;
+    left:33%;
+}
+.line.line4{
+    top: 36%;
+    right:35%;
+}
+.line.line5{
+    top: 42%;
+    left:45%;
+}
+.panel{
+    position: absolute;
+    min-width: 216px;
+    min-height: 180px;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    margin-bottom: 0;    
+}
+.panel.panel-jd{
+    left: 10%;
+    top: 5%;
+}
+.panel.panel-work{
+    right: 10%;
+    top: 3%;
+}
+.panel.panel-need{
+    left: 10%;
+    top: 44%;
+}
+.panel.panel-duty{
+    right: 9%;
+    top: 42%;
+}
+.panel.panel-education{
+    min-width: 492px;
+    min-height: 225px;
+    left: 23%;
+    top:77%;
+}
+.panel .panel-title{
+    width: 115px;
+    height: 31px;
+    background: #eceff1;
+    border: 1px solid #ccc;
+    border-left-width: 2px;
+    border-right-width: 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    float: right;
+    border-radius: 3px;
+}
+.panel.panel-work .panel-title,.panel.panel-duty .panel-title{
+    float: left;
+    border-right-width: 2px;
+    border-left-width: 5px;
+}
+.panel.panel-education .panel-title{
+    margin: 0 auto;
+    float: none;
+}
+.panel .panel-title i{
+    margin-right: 5px;
+}
+.panel.panel-duty .panel-content{
+    padding: 20px 10px;
+    min-height: 100px;
+}
+.panel.panel-education .panel-content{
+    height: 340px;
+}
+.panel .panel-content {
+    clear:both;
+    min-width: 214px;
+    min-height: 120px;
+    border: 1px solid #eceff1; 
+    padding: 20px; 
+    position: relative;
+    top:15px;
+}
+.panel-content .arrow{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    font-size: 0; 
+    border-width: 8px;
+    border-style: dashed dashed solid dashed; 
+}
+.panel-jd .panel-content .outer-border,.panel-need .panel-content .outer-border{   
+    left: 180px; 
+    top: -16px;   
+    border-color: transparent transparent #eceff1 transparent;
+}
+.panel-jd .panel-content .inner-border,.panel-need .panel-content .inner-border{ 
+    left: 180px; 
+    top: -14px; 
+    border-color: transparent transparent #FFF transparent;
+}
+.panel-work .panel-content .outer-border,.panel-duty .panel-content .outer-border{   
+    left: 15px; 
+    top: -16px;   
+    border-color: transparent transparent #eceff1 transparent;
+}
+.panel-work .panel-content .inner-border,.panel-duty .panel-content .inner-border{ 
+    left: 15px; 
+    top: -14px; 
+    border-color: transparent transparent #FFF transparent;
+}
+.panel-education .panel-content .inner-border{ 
+    left: 230px; 
+    top: -14px; 
+    border-color: transparent transparent #FFF transparent;
+}
+.panel-education .panel-content .outer-border{   
+    left: 230px; 
+    top: -16px;   
+    border-color: transparent transparent #eceff1 transparent;
+}
+.panel-duty .panel-table{
+    min-width: 212px;
+}
+.panel-table{
+    min-width: 172px;
+    margin-bottom: 0;
+}
+.panel-table .table-left,.panel-table .table-right{
+    margin: 5px 0;
+    padding: 4px 10px;
+    display: inline-block;
+
+}
+.panel-table .table-duty{
+    width: 31%;
+    background: #ffb74d;
+    color: #fff;
+    margin: 4px 2px;
+    padding: 4px;
+    display: inline-block;
+    border-radius: 3px;
+}
+.panel-table .table-left{
+    width: 40%;
+    background: #80cbc4;  
+    text-align: right;
+    border-radius: 3px 0 0 3px;
+    color: #fff;
+}
+.panel-table .table-right{
+     width: 60%;
+     background: #cfd8dc;
+     text-align: left;
+     border-radius: 0 3px 3px 0;
+}
+.panel-work .panel-table .table-left{
+    width: 40%;
+    background: #81d4fa;  
+    text-align: right;
+    border-radius: 3px 0 0 3px;
+}
+.panel-need .panel-table .table-left{
+    width: 40%;
+    background: #f48fb1;  
+    text-align: right;
+    border-radius: 3px 0 0 3px;
+}
+.charts_warp{
+    width: 100%;
+    height: 100%;
+}
+.langues-title{
+    background: #81d4fa;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    width: 70px;
+    height: 25px;
+    border-radius: 3px;
+}
+.langues-title~div{
+    padding: 0
+}
+.btn-view:hover,.btn-manage:hover,.btn-view.active,.btn-view.active:hover{
+    background: #039be5;
+    color: #fff;
+}
+.panel-border{
+    border: 1px solid #ececec;
+    border-radius: 3px;
+    padding-bottom: 20px;
+}
+.panel-view-title{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+.row-info{
+    background:#e1f5fe;
+    padding:10px;
+}
+.row-info span{
+    margin:5px 20px;
+    color:#3399ff;
+    font-size:14px;
+}
+.btn-match{
+    width: 93px;
+    height: 30px;
+    font-size: 14px;
+    background: #fff;
+    color: #60b1f6;
+    border-radius: 0px;
+}
+.btn-match.active{
+    background: #039be5;
+    color: #fff;
+    box-shadow: none;
+}
+.btn-match:hover{
+    box-shadow: none;
+    color:#60b1f6;
+    z-index: 0 
+}
+.btn-match.active:hover{
+    color: #fff;
+}
+
+.ul-con-left{
+    height:100%;
+}
+.ul-con-left h2{
+    position:relative;
+    height:35px;
+    line-height:35px;
+    font-size:14px;
+    color:#3399ff;
+    padding:0 14px 0 35px;
+}
+.ul-match-add h2{
+    padding-left: 41px;
+}
+.ul-con-left>ul{
+    position:relative;
+    margin-top:10px;
+}
+.ul-con-left>ul>li{
+    margin-bottom:20px;
+}
+.ul-con-left.ul-match-add>ul>li{
+    margin-bottom:10px;
+}
+.ul-con-left li.ul-vertline{
+    padding: 12px 0 0 29px;
+}
+.ul-con-left.ul-match-add li.ul-vertline{
+    padding: 5px 0 0 29px;
+}
+.ul-con-left>ul ul{
+    padding-left:30px;
+    display: none;
+}
+.ul-con-left.ul-match-add>ul ul{
+    padding-left: 0;
+}
+.ul-con-left.ul-match-add>ul ul.no-menu{
+    padding-left: 30px
+}
+.ul-con-left>ul ul.open{
+    display: block;
+}
+.ul-con-left>ul h3{
+    position:relative;
+    height:20px;
+    font-size:13px;
+    color:#333;
+}
+.ul-toggle{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background:#3399ff;
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    line-height:12px;
+    border-radius:2px;
+    cursor:pointer;
+    margin:0 10px;
+}
+.ul-match-add .ul-toggle{
+    margin:0 13px;
+}
+.ul-check{
+    width:16px;
+    height:16px;
+    border:1px solid #2196f3;
+    background:#fff;
+    display:inline-block;
+    vertical-align:sub;
+    margin-right:8px;
+    cursor: pointer;
+}
+.ul-check.checked{
+    background: url("../images/checked.png") no-repeat;
+    border: none;
+}
+.ul-check.checkAll{
+    margin-right: 4px;
+}
+.match-higher{
+    border-bottom:1px dashed #ccc;
+    padding-bottom:15px;
+}
+.match-higher .match-title{
+    margin:20px 0;
+}
+.match-higher .match-content{
+    margin-bottom:10px;
+}
+.match-content span{
+    display:inline-block;
+    height:25px;
+    line-height:26px;
+    color:#fff;
+    text-align: center;
+}
+.match-content span.match-content-left{
+    width: 75px;
+    background:#f48fb1;
+}
+.match-higher:first-child .match-content span.match-content-left{
+    background:#81d4fa;
+}
+.match-higher:last-child .match-content span.match-content-left{
+    background:#a5d6a7;
+}
+.match-content span.match-content-right{
+    width:85px;
+    background:#cdd8dc;
+    margin:0 5px 0 -4px;
+    color: #666;
+}
+.match-content i{
+    color:#42a5f5;
+    cursor:pointer;
+}
+button.btn-match-add{
+    width:70px;
+    height:20px;
+    font-size:12px;
+    background:#fff;
+    color:#3399ff;
+    padding:0;
+    border:1px solid #0099cc;
+    border-radius:2px;
+}
+button.btn-match-add:hover,button.btn-match-add:focus{
+    color: #3399ff;
+}
+.ul-match-add{
+    position:absolute;
+    background:#fafafa;
+    border:1px solid #ccc;
+    min-width:220px;
+    left:25px;
+    z-index:2;
+    max-height: 550px;
+    overflow-y:auto;
+    display: none;
+    padding:0 10px 20px;
+    height: auto;
+}
+.btn-matchgroup{
+    margin-left: 10px;
+}
+.btn-matchgroup button{
+    width:73px;
+    height:22px;
+    background:#0099cc;
+    color:#fff;
+    border:none;
+    border-radius:3px;
+}
+.btn-matchgroup button:last-child{
+  background:#fff;
+  color:#3399ff;
+  border:1px solid #3399ff;
 }

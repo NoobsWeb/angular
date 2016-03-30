@@ -1,0 +1,155 @@
+<div class="page-content clearfix">
+    <div class="pare-head clearfix">
+        <dl class="pull-left">
+            <dt>岗位管理</dt>
+            <dd>
+                <ol class="crumbs clearfix">
+                    <li>岗位管理</li>
+                    <li> <i class="fa fa-chevron-right"></i> </li>
+                    <li>人才匹配</li>               
+                </ol>
+            </dd>
+        </dl>
+    </div>
+    <div class="con-wrap">
+    	<div class="row row-border-bottom">
+             <h1 class="pull-left h1_title">{{ work }}<span>ID:{{ pid }}</span></h1>
+        </div>
+        <div class="row row-top-20">
+            <div class="col-lg-12 row-info">
+                <span class="pull-left">来源公司：{{ company }}</span>
+                <span class="pull-left">所属部门：{{ part }}</span>
+                <span class="pull-left">录入时间：{{ enterTime}}</span>
+                <span class="pull-left">更新时间：{{ updateTime }}</span>
+                <span class="pull-left">招聘人数：{{ count }}</span>
+                <a href="#/manage_userImg/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}" class="pull-right btn btn-default btn-manage">岗位画像</a>
+            </div>
+        </div>
+    	<div class="row row-top-10" style="min-height:950px;">
+	    	<div class="col-left">
+	    		<div class="btn-group" style="border:1px solid #039be5">
+                    <button ng-click="tab_base($event)" class="btn btn-match active">基础匹配</button>
+                    <button ng-click="tab_higher($event)" class="btn btn-match">高级匹配</button>
+                </div>
+                <div ng-if="match=='base'" class="ul-con-left row-top-10">
+                    <h2>
+                        <div ng-click="checkTips(item, $event)" class="ul-check checkAll"></div>
+                        <span>全选</span>
+                    </h2>
+                    <ul class="ul-vertline">
+                        <li ng-repeat="item in items">
+                            <h3 class="clearfix">
+                                <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
+                                <span class="pull-left">{{item.title}}（{{item.num}}）</span> 
+                            </h3>
+                            <ul>
+                                <li ng-repeat="content in item.content" class="ul-vertline">
+                                    <h3 class="clearfix">
+                                        <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
+                                        <span class="pull-left">{{content.ct_title}}（{{content.ct_num}}）</span>
+                                    </h3>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="match=='higher'">
+                    <div ng-repeat="item in match_higher" class="match-higher">
+                        <div class="match-title">
+                            <h5>{{ item.title }}</h5>
+                        </div>
+                        <div ng-repeat="content in item.content" class="match-content">
+                            <span class="match-content-left">{{content.content_left}}</span>
+                            <span class="match-content-right">{{content.content_right}}</span>
+                            <i ng-click="remove(item, $event)" class="fa fa-trash-o"></i>
+                        </div>
+                        <button ng-click="addMatch(item, $event)" class="btn btn-add btn-match-add">添加</button>
+                        <div class="ul-con-left ul-match-add">
+                            <ul class="ul-vertline">
+                                <li ng-repeat="content in match_add">
+                                    <h3 class="clearfix">
+                                        <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                        <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
+                                        <span class="pull-left">{{ content.title }}</span> 
+                                    </h3>
+                                    <ul>
+                                        <li ng-repeat="content in content.content" class="ul-vertline">
+                                            <h3 class="clearfix">
+                                                <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                                <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
+                                                <span class="pull-left">{{content.title}}</span>
+                                            </h3>
+                                            <ul>
+                                                <li ng-repeat="content in content.content" class="ul-vertline">
+                                                    <h3 class="clearfix">
+                                                        <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                                        <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
+                                                        <span class="pull-left">{{content.title}}</span>
+                                                    </h3>
+                                                    <ul class="no-menu">
+                                                        <li ng-repeat="content in content.content" class="ul-vertline">
+                                                            <h3 class="clearfix">
+                                                                <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
+                                                                <span class="pull-left">{{content.content}}</span>
+                                                            </h3>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h2>
+                                <div ng-click="checkTips(item, $event)" class="ul-check checkAll"></div>
+                                <span>全选</span>
+                            </h2>
+                            <div class="btn-matchgroup">
+                                <button ng-click="addMtachItem(item, $event)">确定</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	    	</div>
+	    	<div class="col-right">
+                <div class="col-lg-12">
+                    <a href="#/manage_view/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}" class="pull-right btn btn-default btn-view"><i class="fa fa-chevron-left"></i>决策洞察</a>
+                </div>
+                <div class="col-lg-12">
+                    <table class="table-jy row-top-10">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>年龄</th>
+                            <th>工作年限</th>
+                            <th>最近公司</th>
+                            <th>最近职位</th>
+                            <th>学历</th>
+                            <th>简历来源</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr ng-repeat="tb_item in tb_items">
+                            <td>{{ tb_item.id }}</td>
+                            <td>{{ tb_item.name }}</td>
+                            <td>{{ tb_item.sex }}</td>
+                            <td>{{ tb_item.age }}</td>
+                            <td>{{ tb_item.workAge }}</td>
+                            <td>{{ tb_item.company }}</td>
+                            <td>{{ tb_item.work }}</td>
+                            <td>{{ tb_item.degree }}</td>
+                            <td>{{ tb_item.from }}</td>
+                            <td><a href="javascript:">人才画像</a></td>
+                        </tr>
+                    </table>
+                    <div class="pager">
+                        <p class="pager_total" style="float:left;margin-top:10px">共有<span>{{ pageCount }}</span>页，<span>{{dataCount}}</span>条记录</p>
+                        <pager page-count="pageCount" current-page="currentPage" on-page-change="onPageChange()" first-text="首页" next-text="下一页" prev-text="上一页" last-text="尾页" show-goto="true" goto-text="跳转到"></pager>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

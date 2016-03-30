@@ -1,0 +1,42 @@
+[{
+	"title": "基本情况",
+	"content": [{
+		"title": "个人信息",
+		"content": [{
+			"title": "性别",
+			"content": [{
+				"content": "男"
+			}, {
+				"content": "女"
+			}, {
+				"content": "未知"
+			}]
+		}, {
+			"title": "年龄",
+			"content": [{
+				"content": "28-33岁"
+			}, {
+				"content": "34-39岁"
+			}, {
+				"content": "40-45岁"
+			}, {
+				"content": "46-50岁"
+			}, {
+				"content": "50岁以上"
+			}]
+		},{
+			"title": "工作年限",
+			"content": [{
+				"content": "3年以下"
+			}, {
+				"content": "3-5年"
+			}, {
+				"content": "5-8年"
+			}, {
+				"content": "8-15年"
+			}, {
+				"content": "20年以上"
+			}]
+		}]
+	}]
+}]

@@ -1,0 +1,42 @@
+[{
+	"title": "目标公司",
+	"num": "30",
+	"content": [{
+		"ct_title": "IBM",
+		"ct_num": "15"
+	}, {
+		"ct_title": "思科",
+		"ct_num": "15"
+	}]
+}, {
+	"title": "简历更新时间",
+	"content": [{
+		"ct_title": "一周内",
+		"ct_num": "200"
+	}, {
+		"ct_title": "一月内",
+		"ct_num": "15"
+	}, {
+		"ct_title": "三月内",
+		"ct_num": "15"
+	}, {
+		"ct_title": "半年内",
+		"ct_num": "15"
+	}, {
+		"ct_title": "一年内",
+		"ct_num": "15"
+	}, {
+		"ct_title": "一年以上",
+		"ct_num": "15"
+	}]
+}, {
+	"title": "简历来源",
+	"num": "40",
+	"content": [{
+		"ct_title": "猎聘网",
+		"ct_num": "15"
+	}, {
+		"ct_title": "智联卓聘",
+		"ct_num": "15"
+	}]
+}]

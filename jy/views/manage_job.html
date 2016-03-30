@@ -83,15 +83,15 @@
                         <td>{{ item.count }}</td>
                         <td>{{ item.status }}</td>
                         <td>
-                            <a href="#/manage_userImg/{{ item.id }}/{{ item.work }}" >岗位画像</a>
-                            <a href="javascript:" >人才匹配</a>
+                            <a href="#/manage_userImg/{{ item.id }}&{{ item.work }}&{{ item.enterTime }}&{{item.updateTime}}" >岗位画像</a>
+                            <a href="#/manage_talent/{{ item.id }}&{{ item.work }}&{{ item.enterTime }}&{{item.updateTime}}&{{item.part}}&{{item.count}}&{{item.company}}" >人才匹配</a>
                             <a href="javascript:" >编辑</a>
                             <a href="javascript:" >删除</a>
                         </td>
                     </tr>
                 </table>
                 <div class="pager" class="float:right">
-                    <p class="pager_total" style="float:left;margin-top:10px">共有<span>{{ pageCount }}</span>页，<span>1500</span>条记录</p>
+                    <p class="pager_total" style="float:left;margin-top:10px">共有<span>{{ pageCount }}</span>页，<span>{{dataCount}}</span>条记录</p>
                     <pager page-count="pageCount" current-page="currentPage" on-page-change="onPageChange()" first-text="首页" next-text="下一页" prev-text="上一页" last-text="尾页" show-goto="true" goto-text="跳转到"></pager>
                 </div>
             </div>
