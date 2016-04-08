@@ -1,9 +1,12 @@
 [{
 	"title": "基本情况",
+	"level": "first",
 	"content": [{
 		"title": "个人信息",
+		"level": "second",
 		"content": [{
 			"title": "性别",
+			"level": "third",
 			"content": [{
 				"content": "男"
 			}, {
@@ -13,6 +16,7 @@
 			}]
 		}, {
 			"title": "年龄",
+			"level": "third",
 			"content": [{
 				"content": "28-33岁"
 			}, {
@@ -26,6 +30,7 @@
 			}]
 		},{
 			"title": "工作年限",
+			"level": "third",
 			"content": [{
 				"content": "3年以下"
 			}, {

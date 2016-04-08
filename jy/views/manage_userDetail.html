@@ -1,0 +1,79 @@
+<div class="page-content clearfix">
+    <div class="pare-head clearfix">
+        <dl class="pull-left">
+            <dt>岗位管理</dt>
+            <dd>
+                <ol class="crumbs clearfix">
+                    <li>岗位管理</li>
+                    <li> <i class="fa fa-chevron-right"></i> </li>
+                    <li>岗位微观画像</li>               
+                </ol>
+            </dd>
+        </dl>
+    </div>
+    <div class="con-wrap">
+      <div class="row row-border-bottom">
+         <h1 class="pull-left h1_title">{{ work }}<span>ID:{{ pid }}</span></h1>
+         <a href="#/manage_view/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}" class="pull-right btn btn-default btn-view"><i class="fa fa-chevron-left"></i>决策洞察</a>
+      </div>
+      <div class="row" style="min-height:950px;">
+        <div class="col-left">
+          <p>录入时间：{{ enterTime }}</p>
+          <p>更新时间：{{ updateTime }}</p>
+        </div>
+        <div class="col-right">
+          <ul class="clearfix tab-ul">
+            <li class="active"><a href="#/manage_userImg/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}"><i class="fa fa-pie-chart"></i>概括</a></li>
+            <li><a href="#/manage_userDetail/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}"><i class="fa fa-list"></i>详情</a></li>
+            <li><a href="#/manage_jdInfo/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}"><i class="glyphicon glyphicon-send"></i>JD信息</a></li>
+          </ul>
+          <div class="treeform">
+            <div class="topbar">
+              <button id="w_button">全部收起 <i class="fa fa-caret-up"></i></button>
+            </div>
+            <div class="treeformList">
+              <ul class="nav-pl-2" id="nav">
+                <li ng-repeat="item in items">
+                  <h2 class="title">
+                    <span ng-click="showList(item,$event)" class="fa fa-plus-square w_c43a5f5"><p class="fa-line"></p></span>
+                    <p>{{ item.title }}</p>
+                  </h2>
+                  <ul class="list">
+                    <li ng-repeat="listItem in item.content">
+                      <h2 class="title">
+                        <span ng-click="showList(item,$event)" class="fa fa-plus-square w_c43a5f5">
+                          <p class="fa-line"></p>
+                        </span>
+                        <p class="z_border">{{ listItem.title }} </p>
+                      </h2>
+                      <ul class="list">
+                          <li ng-repeat="contentItem in listItem.content">
+                            <h2 class="title">
+                              <span class="fa fa-minus-square w_c43a5f5">
+                                <p class="fa-line"></p>
+                              </span>
+                              <p class="w_border">{{ contentItem.title }} <strong>{{ contentItem.content }}</strong></p>
+                              <ul>
+                                <li>
+                                  <div class="w_relative">
+                                    <p class="w_own">
+                                      <strong style="width:{{ contentItem.percent }}%"></strong>
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </h2>
+                          </li>
+                      </ul>
+                      <p ng-if="$index+1 == item.content.length" class="empty" ></p>
+                    </li>
+                  </ul>
+                  <p ng-if="$index+1 == items.length" class="empty" ></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+</div>

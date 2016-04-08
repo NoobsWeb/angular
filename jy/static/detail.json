@@ -1,0 +1,60 @@
+[{
+	"title": "基本情况",
+	"content": [{
+		"title": "JD信息",
+		"content": [{
+			"title": "JD来源",
+			"content": "华为",
+			"percent": "60"
+		}, {
+			"title": "目前招聘状态",
+			"content": "招聘中",
+			"percent": "60"
+		}]
+	}, {
+		"title": "岗位信息",
+		"content": []
+	}, {
+		"title": "项目信息",
+		"content": [{
+			"title": "JD来源",
+			"content": "华为",
+			"percent": "60"
+		}, {
+			"title": "目前招聘状态",
+			"content": "招聘中",
+			"percent": "60"
+		}]
+	}]
+}, {
+	"title": "任职要求",
+	"content": [{
+		"title": "基本要求",
+		"content": [{
+			"title": "性别",
+			"content": "不限",
+			"percent": "20"
+		}, {
+			"title": "年龄",
+			"content": "28-33岁",
+			"percent": "60"
+		}, {
+			"title": "目前招聘状态",
+			"content": "招聘中",
+			"percent" : "50"
+		}]
+	}, {
+		"title": "其他要求",
+		"content": [{
+			"title": "竞争力",
+			"content": "五星",
+			"percent": "60"
+		}]
+	}]
+}, {
+	"title": "背景要求",
+	"content": []
+}, {
+	"title": "语言能力",
+	"content": []
+}]

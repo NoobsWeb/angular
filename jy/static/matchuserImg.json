@@ -41,6 +41,11 @@
 		"right": "5年以上"
 	}]
 },{
+	"title": "推荐指数",
+	"class": "recommend",
+	"icon": "fa-star",
+	"content": "ID咨询师"
+},{
 	"title": "岗位职责",
 	"class": "duty",
 	"icon": "fa-paste",

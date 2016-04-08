@@ -1,0 +1,83 @@
+<div class="page-content clearfix">
+  <div class="pare-head clearfix">
+      <dl class="pull-left">
+          <dt>岗位管理</dt>
+          <dd>
+              <ol class="crumbs clearfix">
+                  <li>岗位管理</li>
+                  <li> <i class="fa fa-chevron-right"></i> </li>
+                  <li>人才匹配</li>
+                  <li> <i class="fa fa-chevron-right"></i> </li>
+                  <li>人才画像</li>               
+              </ol>
+          </dd>
+      </dl>
+  </div>
+    <div class="con-wrap">
+    	<div class="row row-border-bottom">
+    		 <h1 class="pull-left h1_title">{{ userInfo.name }}</span></h1>
+    		 <a href="#/manage_view/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}" class="pull-right btn btn-default btn-view"><i class="fa fa-chevron-left"></i>决策洞察</a>
+    	</div>
+    	<div class="row" style="min-height:950px;">
+	    	<div class="col-left">
+          <div class="match-panel">
+            <p>手机：{{ userInfo.name }}</p>
+            <p>邮箱：{{ userInfo.mail }}</p>
+          </div>
+          <div class="match-panel">
+            <p>{{ userInfo.source }}</p>
+          </div>
+          <div class="match-panel">
+            <p>备注信息：{{ userInfo.note }}</p>
+          </div>	    		
+	    	</div>
+	    	<div class="col-right">
+	    		<ul class="clearfix tab-ul">
+	    			<li class="active"><a href="#/manage_userImg/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}"><i class="fa fa-pie-chart"></i>概括</a></li>
+	    			<li><a href="#/manage_userDetail/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}"><i class="fa fa-list"></i>详情</a></li>
+	    			<li><a href="#/manage_jdInfo/{{ pid }}&{{ work }}&{{ enterTime }}&{{updateTime}}"><i class="glyphicon glyphicon-send"></i>JD信息</a></li>
+	    		</ul>
+	    		<div class="infoPanel match-infoPanel">
+            <img class="userPic" src="{{ imgSrc }}" alt="">
+            <img class="line line1" src="static/images/line1.png" alt="">
+            <img class="line line2" src="static/images/line2.png" alt="">
+            <img class="line line3" src="static/images/line3.png" alt="">
+            <img class="line line4" src="static/images/line4.png" alt="">
+            <img class="line line6" src="static/images/line6.png" alt="">
+	    			<div class="panel panel-{{ item.class }}" ng-repeat="item in items">
+	    				<div class="panel-title">
+                <i class="fa {{ item.icon }}"></i>{{ item.title }}
+              </div>
+              <div ng-if="item.class!='recommend'" class="panel-content {{ item.class }}" >
+                  <span class="arrow outer-border"></span>
+                  <span class="arrow inner-border"></span>
+                  <table ng-if="item.class != 'duty'" class="table panel-table">
+                      <tr  ng-repeat="content in item.content">
+                          <td class="table-left">{{ content.left }}</td>
+                          <td class="table-right">{{ content.right}}</td>
+                      </tr>
+                  </table>
+                  <table ng-if="item.class=='duty'" class="table panel-table" >
+                    <tr >
+                      <td ng-repeat="content in item.content"  class="table-duty">{{content}}</td>
+                    </tr>
+                  </table>
+              </div>
+              <div class="panel-content {{ item.class }}" ng-if="item.class=='recommend'">
+                <div style="text-align:center">
+                  <span class="fa fa-star-o" style="color:#ff9999;font-size:24px;"></span>
+                  <span class="fa fa-star-o" style="color:#ff9999;font-size:24px;"></span>
+                  <span class="fa fa-star-o" style="color:#ff9999;font-size:24px;"></span>
+                  <span class="fa fa-star-o" style="color:#ff9999;font-size:24px;"></span>
+                  <span class="fa fa-star-o" style="color:#ff9999;font-size:24px;"></span>
+                </div>
+                <div style="text-align:center;margin-top:5px">
+                  匹配：{{item.content}}
+                </div>
+              </div>
+	    			</div>        
+	    		</div>
+	    	</div>
+	    </div>
+    </div>    
+</div>

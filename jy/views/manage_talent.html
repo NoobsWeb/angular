@@ -39,7 +39,8 @@
                     <ul class="ul-vertline">
                         <li ng-repeat="item in items">
                             <h3 class="clearfix">
-                                <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                <span ng-click="open_ul($event)" class="fa fa-plus-square w_c43a5f5 pull-left">
+                                </span>
                                 <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
                                 <span class="pull-left">{{item.title}}（{{item.num}}）</span> 
                             </h3>
@@ -69,21 +70,21 @@
                             <ul class="ul-vertline">
                                 <li ng-repeat="content in match_add">
                                     <h3 class="clearfix">
-                                        <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                         <span ng-click="open_ul($event)" class="fa fa-plus-square w_c43a5f5 pull-left"></span>
                                         <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
                                         <span class="pull-left">{{ content.title }}</span> 
                                     </h3>
                                     <ul>
                                         <li ng-repeat="content in content.content" class="ul-vertline">
                                             <h3 class="clearfix">
-                                                <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                                <span ng-click="open_ul($event)" class="fa fa-plus-square w_c43a5f5 pull-left"></span>
                                                 <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
                                                 <span class="pull-left">{{content.title}}</span>
                                             </h3>
                                             <ul>
                                                 <li ng-repeat="content in content.content" class="ul-vertline">
                                                     <h3 class="clearfix">
-                                                        <div class="pull-left ul-toggle" ng-click="open_ul($event)">+</div>
+                                                        <span ng-click="open_ul($event)" class="fa fa-plus-square w_c43a5f5 pull-left"></span>
                                                         <div ng-click="checkTips(item, $event)" class="pull-left ul-check"></div>
                                                         <span class="pull-left">{{content.title}}</span>
                                                     </h3>
@@ -141,7 +142,7 @@
                             <td>{{ tb_item.work }}</td>
                             <td>{{ tb_item.degree }}</td>
                             <td>{{ tb_item.from }}</td>
-                            <td><a href="javascript:">人才画像</a></td>
+                            <td><a href="#/match_userImg/{{tb_item.id}}">人才画像</a></td>
                         </tr>
                     </table>
                     <div class="pager">
