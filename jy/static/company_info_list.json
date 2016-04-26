@@ -1,0 +1,37 @@
+[{
+    "id": "0001",
+    "departName": "咨询部1",
+    "salary": "50万",
+    "workAge": "3年",
+    "resumeNum": "100" 
+  },{
+    "id": "0002",
+    "departName": "咨询部2",
+    "salary": "50万",
+    "workAge": "3年",
+    "resumeNum": "100" 
+  },{
+    "id": "0003",
+    "departName": "咨询部3",
+    "salary": "50万",
+    "workAge": "3年",
+    "resumeNum": "100" 
+  },{
+    "id": "0004",
+    "departName": "咨询部4",
+    "salary": "50万",
+    "workAge": "3年",
+    "resumeNum": "100" 
+  },{
+    "id": "0005",
+    "departName": "咨询部5",
+    "salary": "50万",
+    "workAge": "3年",
+    "resumeNum": "100" 
+  },{
+    "id": "0006",
+    "departName": "咨询部6",
+    "salary": "50万",
+    "workAge": "3年",
+    "resumeNum": "100" 
+  }]

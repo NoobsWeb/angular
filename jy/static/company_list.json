@@ -1,0 +1,43 @@
+[{
+    "id": "0001",
+    "customerName": "华为1",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  },{
+    "id": "0002",
+    "customerName": "华为2",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  },{
+    "id": "0003",
+    "customerName": "华为3",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  },{
+    "id": "0004",
+    "customerName": "华为4",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  },{
+    "id": "0005",
+    "customerName": "华为5",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  },{
+    "id": "0006",
+    "customerName": "华为6",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  },{
+    "id": "0007",
+    "customerName": "华为7",
+    "JDTotal": "200",
+    "recommend": "15",
+    "operation": ["企业信息","目标公司"] 
+  }]

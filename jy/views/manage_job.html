@@ -4,39 +4,20 @@
             <dt>岗位管理</dt>
             <dd>
                 <ol class="crumbs clearfix">
-                    <li>岗位管理</li>                
+                    <li>岗位管理</li>
                 </ol>
             </dd>
         </dl>
     </div>
     <div class="con-wrap con-wrap-border">
     	<div class="row">
-    		<div class="col-lg-4 col-md-12">
-				<p class="pull-left bg-date">来源公司：</p>
-                <div class="select pull-left">
-                    <cite>全部来源公司</cite>
-                     <ol>
-                        <li ng-repeat="names in companys"><a href="javascript:;">{{names.name}}</a></li>
-                    </ol>
-                </div>
-    		</div>
-    		<div class="col-lg-4 col-md-12">
-				<p class="pull-left bg-date">来源部门：</p>
-                <div class="select pull-left">
-                    <cite>全部来源部门</cite>
-                     <ol>
-                        <li ng-repeat="names in part"><a href="javascript:;">{{names.name}}</a></li>
-                    </ol>
-                </div>
-    		</div>
-    		<div class="col-lg-4 col-md-12">
-				<p class="pull-left bg-date">推荐状态：</p>
-                <div class="select pull-left">
-                    <cite>全部招聘状态：</cite>
-                     <ol>
-                        <li><a href="javascript:;">选择时间范围</a></li>
-                        <li><a href="javascript:;">最近一年</a></li>
-                        <li><a href="javascript:;">2015年度</a></li>
+    		<div class="col-lg-4 col-md-12" ng-repeat="item in companyInfo">
+				<p class="pull-left bg-date">{{  item.title }}：</p>
+                <div class="select pull-left" ng-click="showList($event)">
+                    <input type="text" placeholder="{{item.holder}}" readonly>
+                    <ol>
+                        <li ng-click="choseList(list,item,$event)"><a href="javascript:;">全部</a></li>
+                        <li ng-click="choseList(list.name,item,$event)" ng-repeat="list in item.content"><a href="javascript:;">{{list.name}}</a></li>
                     </ol>
                 </div>
     		</div>
@@ -44,20 +25,20 @@
     	<div class="row row-top-10">
     		<div class="col-lg-4 col-md-12">
 				<p class="pull-left bg-date">岗位编号：</p>
-               	<input type="text" class="pull-left search-input" placeholder="请输入搜索关键词"/>
+               	<input type="text" ng-model="formInput.positionNum" class="pull-left search-input" placeholder="请输入搜索关键词"/>
     		</div>
     		<div class="col-lg-4 col-md-12">
 				<p class="pull-left bg-date">岗位名称：</p>
-               	<input type="text" class="pull-left search-input" placeholder="请输入搜索关键词"/>
+               	<input type="text" ng-model="formInput.positionName" class="pull-left search-input" placeholder="请输入搜索关键词"/>
     		</div>
     		<div class="col-lg-4 col-md-12 col-special">
 				<p class="pull-left bg-date">岗位关键词：</p>
-               	<input type="text" class="pull-left search-input" placeholder="请输入搜索关键词"/>
+               	<input type="text" ng-model="formInput.positionKeyword" class="pull-left search-input" placeholder="请输入搜索关键词"/>
     		</div>
     	</div>
 		<div class="row row-top-20">
-			<button class="btn btn-enter pull-left">岗位录入</button>
-			<button class="btn btn-search pull-right"><i class="icon-search"></i>岗位搜索</button>
+			<a href="#manage_entry" class="pull-left"><button class="btn btn-enter">岗位录入</button></a>
+			<button ng-click="search()" class="btn btn-search pull-right"><i class="icon-search"></i>岗位搜索</button>
 		</div>
 		<div class="row row-top-10" >
             <div class="col-lg-12">
@@ -74,17 +55,17 @@
                         <th width="20%">操作</th>
                     </tr>
                     <tr ng-repeat="item in items">
-                        <td>{{ item.id }}</td>
-                        <td>{{ item.work }}</td>
-                        <td>{{ item.company }}</td>
-                        <td>{{ item.part }}</td>
-                        <td>{{ item.enterTime }}</td>
-                        <td>{{ item.updateTime }}</td>
-                        <td>{{ item.count }}</td>
-                        <td>{{ item.status }}</td>
+                        <td>{{ item.positionNum }}</td>
+                        <td>{{ item.positionName }}</td>
+                        <td>{{ item.customerCompany }}</td>
+                        <td>{{ item.belongDept }}</td>
+                        <td>{{ item.dddTime }}</td>
+                        <td>{{ item.modifyTIme }}</td>
+                        <td>{{ item.recruitNum }}</td>
+                        <td>{{ item.recruitState }}</td>
                         <td>
-                            <a href="#/manage_userImg/{{ item.id }}&{{ item.work }}&{{ item.enterTime }}&{{item.updateTime}}" >岗位画像</a>
-                            <a href="#/manage_talent/{{ item.id }}&{{ item.work }}&{{ item.enterTime }}&{{item.updateTime}}&{{item.part}}&{{item.count}}&{{item.company}}" >人才匹配</a>
+                            <a href="#/manage_userImg/{{ item.id }}" >岗位画像</a>
+                            <a href="#/manage_talent/{{ item.id }}" >人才匹配</a>
                             <a href="javascript:" >编辑</a>
                             <a href="javascript:" >删除</a>
                         </td>

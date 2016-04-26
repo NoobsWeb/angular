@@ -1,7 +1,5 @@
 [{
-	"title": "JD信息",
-	"class": "jd",
-	"icon": "fa-paper-plane",
+	"tips":"jd",
 	"content": [{
 		"left": "JD来源",
 		"right": "华为"
@@ -13,9 +11,7 @@
 		"right": "IBM"
 	}]
 },{
-	"title": "岗位信息",
-	"class": "work",
-	"icon": "fa-book",
+	"tips":"work",
 	"content": [{
 		"left": "名称",
 		"right": "IDC营销专家"
@@ -27,9 +23,7 @@
 		"right": "北京"
 	}]
 },{
-	"title": "任职要求",
-	"class": "need",
-	"icon": "fa-check-circle-o",
+	"tips":"need",
 	"content": [{
 		"left": "性别",
 		"right": "不限"
@@ -41,8 +35,6 @@
 		"right": "5年以上"
 	}]
 },{
-	"title": "岗位职责",
-	"class": "duty",
-	"icon": "fa-paste",
+	"tips":"duty",
 	"content": ["营销","IDC","aasd","asdq","as11","vss","nss","eew"]
 }]

@@ -1,0 +1,37 @@
+[{
+  "id": "0001",
+  "department": "",
+  "targetCompany": "",
+  "targetCompanyDepart": ["目标","部门1"],
+  "resumeNum": 100
+},{
+  "id": "0002",
+  "department": "",
+  "targetCompany": "IBM",
+  "targetCompanyDepart": ["目标","部门1"],
+  "resumeNum": 100
+},{
+  "id": "0003",
+  "department": "部门一",
+  "targetCompany": "",
+  "targetCompanyDepart": ["目标","部门1"],
+  "resumeNum": 100
+},{
+  "id": "0004",
+  "department": "",
+  "targetCompany": "微软",
+  "targetCompanyDepart": ["目标","部门1"],
+  "resumeNum": 100
+},{
+  "id": "0005",
+  "department": "",
+  "targetCompany": "思科",
+  "targetCompanyDepart": ["目标","部门1"],
+  "resumeNum": 100
+},{
+  "id": "0005",
+  "department": "部门二",
+  "targetCompany": "思科",
+  "targetCompanyDepart": ["目标","部门1"],
+  "resumeNum": 100
+}]

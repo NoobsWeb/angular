@@ -1,0 +1,69 @@
+<div class="page-content clearfix">
+    <div class="pare-head clearfix">
+        <dl class="pull-left">
+            <dt>岗位管理</dt>
+            <dd>
+                <ol class="crumbs clearfix">
+                <li><a href="#manage">岗位管理</a></li>
+                <li> <i class="fa fa-chevron-right"></i> </li>
+                <li><a href="#/manage_talent/{{ pid }}&{{ work }}&{{ item.enterTime }}&{{item.updateTime}}&{{item.part}}&{{item.count}}&{{item.company}}">人才匹配</a></li>
+                <li> <i class="fa fa-chevron-right"></i> </li>
+                <li>人才画像</li>               
+              </ol>
+            </dd>
+        </dl>
+    </div>
+    <div class="con-wrap">
+    	<div class="row row-border-bottom">
+             <h1 class="pull-left h1_title">{{ work }}<span>ID:{{ pid }}</span></h1>
+        </div>
+    	<div class="row" style="min-height:950px;">
+	    	<div class="col-left">
+	    		<div class="match-panel">
+                    <p>手机：{{ userInfo.name }}</p>
+                    <p>邮箱：{{ userInfo.mail }}</p>
+                </div>
+                <div class="match-panel">
+                    <p>{{ userInfo.source }}</p>
+                </div>
+                <div class="match-panel">
+                    <p>备注信息：{{ userInfo.note }}</p>
+                </div>    
+	    	</div>
+	    	<div class="col-right">
+	    		<ul class="clearfix tab-ul">
+                    <li><a href="#/match_userImg/{{ pid }}"><i class="fa fa-pie-chart"></i>概括</a></li>
+                    <li><a href="#/match_userDetail/{{ pid }}"><i class="fa fa-list"></i>详情</a></li>
+                    <li class="active"><a href="#/match_jdInfo/{{ pid }}"><i class="glyphicon glyphicon-send"></i>JD信息</a></li>
+                </ul>
+	    		<div style="padding-left:10px" ng-repeat="item in items">
+                    <div class="col-lg-12 row-top-20" style="border-bottom:3px solid #b3e5fc;padding-bottom:5px;">
+                        <h1 class="h1_title pull-left">{{item.title}}</h1>
+                        <div ng-if="$index == 0">
+                            <a href="javascript:" style="font-size:16px;border:1px solid #0099cc;width:110px;height:30px;text-align:center;margin:10px 5px 0;border-radius:2px;color:#3399ff;line-height:28px;" class="pull-right">简历补录</a>
+                            <a href="javascript:" style="font-size:16px;border:1px solid #0099cc;width:110px;height:30px;text-align:center;margin:10px 5px 0;border-radius:2px;color:#3399ff;line-height:28px;" class="pull-right">查看源简历</a>
+                        </div>
+                    </div>
+	    			<div class="col-lg-12 row-top-20" ng-repeat="content in item.content">
+                        <div aaa="{{$index}}" style="position:absolute;border:1px solid #ccc;padding-top:5px;width:122px;height:159px;right:20px;text-align:center" ng-if="item.title =='个人信息'&& $index==0">
+                            <img ng-if="$index==0" src="static/images/pic.jpg" alt="">
+                        </div>
+                        <span>{{content.left}}：</span>
+                        <span>{{content.right}}</span>           
+                    </div>
+	    		</div>
+                <div style="padding-left:10px;">
+                    <div class="col-lg-12 row-top-20" style="border-bottom:3px solid #b3e5fc;padding-bottom:5px;">
+                        <h1 class="h1_title">{{langues.title}}</h1>
+                    </div>
+                    <div style="border-bottom:1px dashed #ccc;padding-bottom:10px" class="col-lg-12 row-top-10" ng-repeat="content in langues.content">
+                        <div class="col-lg-12 row-top-10" ng-repeat="level in content.langues_level">
+                            <span>{{level.left}}：</span>
+                            <span>{{level.right}}</span>
+                        </div>                                   
+                    </div>
+                </div>
+	    	</div>
+	    </div>
+    </div>    
+</div>

@@ -1,0 +1,45 @@
+<div class="page-content clearfix company-list">
+  <div class="pare-head clearfix">
+      <dl class="pull-left">
+          <dt>公司分析</dt>
+          <dd>
+              <ol class="crumbs clearfix">
+                  <li>公司列表</li>                
+              </ol>
+          </dd>
+      </dl>
+  </div>
+  <div class="list-con con-wrap con-wrap-border">
+    <h3>公司列表</h3>
+    <div class="list-con-head clearfix">
+      <a href="#company_normalize"><input type="button" class="btn pull-left" value="公司名称归一" /></a>
+      <div class="pull-right search-btn">
+        <i class="search-icon"></i>
+        <input class="btn" type="button" value="搜索" ng-click="search()"/>
+      </div>
+      <div class="select pull-right" ng-click="showList($event)">
+        <input type="text" placeholder="按公司名称查找" readonly>
+        <ol>
+          <li ng-click="choseList(list,companyList,$event)"><a href="javascript:;">全部</a></li>
+          <li ng-click="choseList(list,companyList,$event)" ng-repeat="list in searchList"><a href="javascript:;">{{list}}</a></li>
+        </ol>
+      </div>
+    </div>
+    <table class="list-con-table table">
+      <tr>
+        <th>序号</th>
+        <th>客户名称</th>
+        <th>JD总数</th>
+        <th>已推荐人才</th>
+        <th>操作</th>
+      </tr>
+      <tr ng-repeat="data in companyList">
+        <td>{{data.num}}</td>
+        <td>{{data.customerCompany}}</td>
+        <td>{{data.jdCount}}</td>
+        <td>{{data.recommendNum}}</td>
+        <td><a href="#company_info/{{data.num}}&{{data.customerCompany}}">企业信息</a>&nbsp;&nbsp;<a href="#company_target/{{data.num}}&{{data.customerCompany}}">目标公司</a></td>
+      </tr>
+    </table>
+  </div>
+</div>

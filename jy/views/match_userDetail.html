@@ -3,29 +3,38 @@
         <dl class="pull-left">
             <dt>岗位管理</dt>
             <dd>
-                <ol class="crumbs clearfix">
-                    <li><a href="#manage">岗位管理</a></li>
-                    <li> <i class="fa fa-chevron-right"></i> </li>
-                    <li>岗位微观画像</li>               
-                </ol>
+              <ol class="crumbs clearfix">
+                <li>岗位管理</li>
+                <li> <i class="fa fa-chevron-right"></i> </li>
+                <li>人才匹配</li>
+                <li> <i class="fa fa-chevron-right"></i> </li>
+                <li>人才画像</li>               
+              </ol>
             </dd>
         </dl>
     </div>
     <div class="con-wrap">
       <div class="row row-border-bottom">
-         <h1 class="pull-left h1_title">{{ infoData.positionName }}<span>ID:{{ infoData.positionNum }}</span></h1>
-         <a href="#/manage_view/{{ id }}" class="pull-right btn btn-default btn-view"><i class="fa fa-chevron-left"></i>决策洞察</a>
+         <h1 class="pull-left h1_title">{{ userInfo.name }}</span></h1>
       </div>
       <div class="row" style="min-height:950px;">
         <div class="col-left">
-          <p>录入时间：{{ infoData.addTime }}</p>
-          <p>更新时间：{{ infoData.modifyTime }}</p>
+          <div class="match-panel">
+            <p>手机：{{ userInfo.name }}</p>
+            <p>邮箱：{{ userInfo.mail }}</p>
+          </div>
+          <div class="match-panel">
+            <p>{{ userInfo.source }}</p>
+          </div>
+          <div class="match-panel">
+            <p>备注信息：{{ userInfo.note }}</p>
+          </div>          
         </div>
         <div class="col-right">
           <ul class="clearfix tab-ul">
-            <li><a href="#/manage_userImg/{{ id }}"><i class="fa fa-pie-chart"></i>概括</a></li>
-            <li class="active"><a href="#/manage_userDetail/{{ id }}"><i class="fa fa-list"></i>详情</a></li>
-            <li><a href="#/manage_jdInfo/{{ id }}"><i class="glyphicon glyphicon-send"></i>JD信息</a></li>
+            <li><a href="#/match_userImg/{{ pid }}"><i class="fa fa-pie-chart"></i>概括</a></li>
+            <li class="active"><a href="#/match_userDetail/{{ pid }}"><i class="fa fa-list"></i>详情</a></li>
+            <li><a href="#/match_jdInfo/{{ pid }}"><i class="glyphicon glyphicon-send"></i>JD信息</a></li>
           </ul>
           <div class="treeform">
             <div class="topbar">
@@ -53,6 +62,15 @@
                                 <p class="fa-line"></p>
                               </span>
                               <p class="w_border">{{ contentItem.title }} <strong>{{ contentItem.content }}</strong></p>
+                              <ul>
+                                <li>
+                                  <div class="w_relative">
+                                    <p class="w_own">
+                                      <strong style="width:{{ contentItem.percent }}%"></strong>
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
                             </h2>
                           </li>
                       </ul>

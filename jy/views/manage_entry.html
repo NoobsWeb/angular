@@ -1,0 +1,160 @@
+<div class="page-content clearfix post-entry">
+  <div class="pare-head clearfix">
+    <dl class="pull-left">
+      <dt>岗位管理</dt>
+      <dd>
+        <ol class="crumbs clearfix">
+          <li>岗位管理</li>
+          <li> <i class="fa fa-chevron-right"></i> </li>
+          <li>岗位录入</li>
+        </ol>
+      </dd>
+    </dl>
+  </div>
+  <div class="con-wrap entry-con entry-con1">
+    <div class="entry-con-tab clearfix">
+      <p class="pull-left tab11"></p>
+      <p class="pull-left tab2"></p>
+      <p class="pull-left tab3"></p>
+    </div>
+    <h2>JD信息</h2>
+    <div class="info-tit">
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>客户公司：</label>
+        <div class="select pull-left" ng-click="showList($event)">
+          <input id="positionLevel" type="text" readonly>
+          <ol>
+            <li ng-click="choseList(items,'customerCompany',$event)" ng-repeat="items in item.companyNameList"><a href="javascript:;">{{items}}</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">目标公司：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.targetCompany" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">岗位职级：</label>
+        <div class="select pull-left" ng-click="showList($event)">
+          <input id="positionLevel" type="text" readonly>
+          <ol>
+            <li ng-click="choseList('初级','positionLevel',$event)"><a href="javascript:;">初级</a></li>
+            <li ng-click="choseList('中级','positionLevel',$event)"><a href="javascript:;">中级</a></li>
+            <li ng-click="choseList('高级','positionLevel',$event)"><a href="javascript:;">高级</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>招聘人数：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.recruitNum" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>招聘原因：</label>
+        <div class="select pull-left" ng-click="showList($event)">
+          <input class="must-position" id="hiringReason" type="text" readonly>
+          <ol>
+            <li ng-click="choseList('新增','recruitReason',$event)"><a href="javascript:;">新增</a></li>
+            <li ng-click="choseList('替换','recruitReason',$event)"><a href="javascript:;">替换</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>招聘状态：</label>
+        <div class="select pull-left" ng-click="showList($event)">
+          <input class=" must-position" id="hiringState" type="text" readonly>
+          <ol>
+            <li ng-click="choseList('招聘中','recruitState',$event)"><a href="javascript:;">招聘中</a></li>
+            <li ng-click="choseList('暂停中','recruitState',$event)"><a href="javascript:;">暂停中</a></li>
+            <li ng-click="choseList('已关闭','recruitState',$event)"><a href="javascript:;">已关闭</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <h2>基本信息</h2>
+    <div class="info-tit">
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>岗位名称：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.positionName" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>岗位职责：</label>
+        <textarea class=" pull-left" ng-model="entryItem.positionDuty" ></textarea>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>任职资格：</label>
+        <textarea class=" pull-left" ng-model="entryItem.qualification" ></textarea>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>所属行业：</label>
+        <div class="select pull-left" ng-click="showList($event)">
+          <input class=" must-position" id="industry" type="text" readonly>
+          <ol>
+            <li ng-click="choseList(items.name,'belongIndustry',$event)" ng-repeat="items in item.industryList"><a href="javascript:;">{{items.name}}</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left"><span style="color:red">*</span>年薪范围：</label>
+        <div class="pull-left inp-special">
+          <input type="text" class="search-input" ng-model="salaryStartMust" />
+          <span>万</span>
+        </div>
+        <label class="pull-left label-to">至</label>
+        <div class="pull-left inp-special">
+          <input type="text" class="search-input" ng-model="salaryEndMust" />
+          <span>万</span>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">工作地点：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.workPlace" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">出差地点：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.bussinesstripPlace" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">出差频率：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.bussinesstripRate" />
+        <span class="pull-left percent-unit">%</span>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">所属部门：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.belongDept" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">汇报对象：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.reportTarget" />
+      </div>
+    </div>
+    <h2>项目信息</h2>
+    <div class="info-tit">
+      <div class="clearfix">
+        <label class="pull-left">项目名称：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.projectName" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">项目地点：</label>
+        <input type="text" class="search-input pull-left" ng-model="entryItem.projectPlace" />
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">项目职位：</label>
+        <div class="select pull-left" ng-click="showList($event)">
+          <input id="itemPosition" type="text" readonly>
+          <ol>
+            <li ng-click="choseList(items.name,'projectPosition',$event)" ng-repeat="items in item.functionList"><a href="javascript:;">{{items.name}}</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label class="pull-left">项目职责：</label>
+        <textarea class=" pull-left" ng-model="entryItem.projectDuty" ></textarea>
+      </div>
+    </div>
+    
+    <div class="entry-con-btn">
+      <a class="btn entry-next" ng-click="next1()" href="{{nextStep1?'#/manage_entry2':'javascript:;'}}">下一步</a>
+      <input type="button" class="btn entry-cancel" value="取消" />
+    </div>
+  </div>
+
+</div>

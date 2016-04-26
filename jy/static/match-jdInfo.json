@@ -1,0 +1,80 @@
+[{
+	"title": "个人信息",
+	"content": [{
+		"left": "来源公司：",
+		"right": "华为"
+	}, {
+		"left": "目标公司",
+		"right": "IBM"
+	},{
+		"left": "目标公司",
+		"right": "IBM"
+	},{
+		"left": "目标公司",
+		"right": "IBM"
+	},{
+		"left": "目标公司",
+		"right": "IBM"
+	},{
+		"left": "目标公司",
+		"right": "IBM"
+	},{
+		"left": "目标公司",
+		"right": "IBM"
+	},{
+		"left": "目标公司",
+		"right": "IBM"
+	}]
+}, {
+	"title": "基本信息",
+	"content": [{
+		"left": "岗位名称",
+		"right": "IDC营销专家"
+	}, {
+		"left": "岗位职责",
+		"right": "无线网络架构师无线网络架构师无线网络架构师无线网络架构师无线网络架构师无线网络架构师无线网络架构师"
+	}, {
+		"left": "所属行业",
+		"right": "互联网"
+	}, {
+		"left": "年薪范围",
+		"right": "50-100W"
+	}, {
+		"left": "工作地点",
+		"right": "北京"
+	}]
+}, {
+	"title": "基本要求",
+	"content": [{
+		"left": "年龄",
+		"right": "28-33岁"
+	}, {
+		"left": "工作年限",
+		"right": "5年以上"
+	}]
+}, {
+	"title": "语言能力",
+	"content": [{
+		"langues_level": [{
+			"left": "语种",
+			"right": "英语"
+		},{
+			"left": "听说",
+			"right": "熟练"
+		}, {
+			"left": "读写",
+			"right": "熟练"
+		}]
+	}, {
+		"langues_level": [{
+			"left": "语种",
+			"right": "英语"
+		},{
+			"left": "听说",
+			"right": "熟练"
+		}, {
+			"left": "读写",
+			"right": "熟练"
+		}]
+	}]
+}]

@@ -1,0 +1,97 @@
+<div class="page-content clearfix talent-map">
+  <div class="pare-head clearfix">
+    <dl class="pull-left">
+      <dt>人才库</dt>
+    </dl>
+  </div>
+  <div class="con-wrap">
+    <div class="talent-con1 clearfix">
+      <div class="talent-con1-left con-wrap-border pull-left">
+        <div class="clearfix talent-cont-tit">
+          <h4 class="pull-left">当前人才总数量</h4>
+          <i class="pull-left talent-tip"></i>
+        </div>
+        <p ng-bind="talentNum"></p>
+      </div>
+      <div class="talent-con1-right con-wrap-border pull-right">
+        <div class="clearfix talent-cont-tit">
+          <h4 class="pull-left">当前人才总数量</h4>
+          <i class="pull-left talent-tip"></i>
+        </div>
+        <div id="talent-line">
+          
+        </div>
+      </div>
+    </div>
+    <div class="talent-con2 clearfix">
+      <div class="talent-con2-left con-wrap-border pull-left">
+        <div class="clearfix talent-cont-tit">
+          <h4 class="pull-left">职能分布</h4>
+          <i class="pull-left talent-tip"></i>
+        </div>
+        <div class="table-box">
+          <table >
+            <tr>
+              <th>序号</th>
+              <th>分类</th>
+              <th>职能</th>
+              <th>简历数量</th>
+            </tr>
+            <tr ng-repeat="data in roleDutyList">
+              <td>{{data.number}}</td>
+              <td>{{data.type}}</td>
+              <td>{{data.functional}}</td>
+              <td>{{data.cvCount}}</td>
+            </tr>
+          </table>
+          <div class="pager" class="float:right">
+            <pager page-count="pageCount" current-page="currentPage" on-page-change="onDutyPageChange()" first-text="首页" next-text="下一页" prev-text="上一页" last-text="尾页" show-goto="true" goto-text="跳转到"></pager>
+          </div>
+        </div>
+      </div>
+      <div class="talent-con2-right con-wrap-border pull-right">
+        <div class="clearfix talent-cont-tit">
+          <h4 class="pull-left">公司分布</h4>
+          <i class="pull-left talent-tip"></i>
+        </div>
+        <div id="talent-bar">
+          
+        </div>
+      </div>
+    </div>
+    <div class="talent-con2 talent-con3 clearfix">
+      <div class="talent-con2-left con-wrap-border pull-left">
+        <div class="clearfix talent-cont-tit">
+          <h4 class="pull-left">城市分布</h4>
+          <i class="pull-left talent-tip"></i>
+        </div>
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>序号</th>
+              <th>城市</th>
+              <th>简历数量</th>
+            </tr>
+            <tr ng-repeat="data in roleCityList">
+              <td>{{data.number}}</td>
+              <td>{{data.city}}</td>
+              <td>{{data.cvCount}}</td>
+            </tr>
+          </table>
+          <div class="pager" class="float:right">
+            <pager page-count="pageCount" current-page="currentPage" on-page-change="onCityPageChange()" first-text="首页" next-text="下一页" prev-text="上一页" last-text="尾页" show-goto="true" goto-text="跳转到"></pager>
+          </div>
+        </div>
+      </div>
+      <div class="talent-con2-right con-wrap-border pull-right">
+        <div class="clearfix talent-cont-tit">
+          <h4 class="pull-left">工龄分布</h4>
+          <i class="pull-left talent-tip"></i>
+        </div>
+        <div id="talent-bar2">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,8 @@
-{
-	"company": [{
+[{
+	"class": "sourceCompany",
+	"holder": "全部来源公司",
+	"title":"来源公司",
+	"content": [{
 		"name": "百度"
 	}, {
 		"name": "百分点"
@@ -11,10 +14,23 @@
 		"name": "阿里"
 	}, {
 		"name": "京东"
-	}],
-	"part": [{
+	}]
+},{
+	"class": "sourceDept",
+	"holder": "全部来源部门",
+	"title":"来源部门",
+	"content": [{
 		"name": "市场部"
 	}, {
 		"name": "研发部"
 	}]
-}
+},{
+	"class": "recruitState",
+	"holder": "全部招聘状态",
+	"title":"推荐状态",
+	"content": [{
+		"name": "未招聘"
+	}, {
+		"name": "招聘中"
+	}]
+}]

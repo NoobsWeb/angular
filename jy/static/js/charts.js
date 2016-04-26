@@ -24,3 +24,34 @@ var barCharts = function() {
     }
     return this
 }
+
+var lineCharts = function(){
+    this.option = {
+      tooltip: {
+        trigger: 'axis'
+      },
+      calculable: true,
+      xAxis: [{
+        type: 'category',
+        boundaryGap: false,
+        data: []
+      }],
+      yAxis: [{
+        type: 'value'
+      }],
+      series: [{
+        name: '成交',
+        type: 'line',
+        smooth: true,
+        itemStyle: {
+          normal: {
+            areaStyle: {
+              type: 'default'
+            },
+            color: '#56a6e9'
+          },
+        },
+        data: []
+      }]
+    };
+}

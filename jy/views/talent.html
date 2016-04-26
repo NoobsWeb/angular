@@ -1,0 +1,45 @@
+<div class="page-content clearfix talent-page">
+    <div class="pare-head clearfix">
+        <dl class="pull-left">
+            <dt>人才库</dt>
+            <dd>
+                <ol class="crumbs clearfix">
+                    <li>人才列表</li>                
+                </ol>
+            </dd>
+        </dl>
+    </div>
+    <div class="con-wrap con-wrap-border">
+      <div class="talent-con-head clearfix">
+        <div class="pull-left table-radio clearfix" ng-class="tableRadio1" ng-click="changeResume(0)"><i class="pull-left"></i><span class="pull-left">全部简历</span></div>
+        <div class="pull-left table-radio clearfix" ng-class="tableRadio2" ng-click="changeResume(1)"><i class="pull-left"></i><span class="pull-left">中文简历</span></div>
+        <div class="pull-left table-radio clearfix" ng-class="tableRadio3" ng-click="changeResume(2)"><i class="pull-left"></i><span class="pull-left">英文简历</span></div>
+        <div class="pull-right table-search clearfix">
+          <label class="pull-left">关键字：</label>
+          <input class="pull-left search-input" type="text" />
+          <div class="pull-left search-btn">
+            <i class="search-icon"></i>
+            <input class="btn" type="button" value="搜索" />
+          </div>
+        </div>
+      </div>
+      <table class="talent-con-data table">
+        <tr>
+          <th>人才编号</th>
+          <th>关键词</th>
+          <th>简历来源</th>
+          <th>操作</th>
+        </tr>
+        <tr ng-repeat="data in talentInfo">
+          <td>{{ data.number }}</td>
+          <td>{{ data.keywords }}</td>
+          <td>{{ data.source }}</td>
+          <td><a href="#/talent_protrait/{{ data.id }}&{{ data.source }}&{{ data.uniqueId }}">查看简历</a></td>
+        </tr>
+      </table>
+      <div class="pager" class="float:right">
+          <p class="pager_total" style="float:left;margin-top:10px">共有<span>{{ pageCount }}</span>页，<span>{{dataCount}}</span>条记录</p>
+          <pager page-count="pageCount" current-page="currentPage" on-page-change="onPageChange()" first-text="首页" next-text="下一页" prev-text="上一页" last-text="尾页" show-goto="true" goto-text="跳转到"></pager>
+      </div>
+    </div>
+</div>
